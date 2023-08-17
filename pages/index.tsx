@@ -10,7 +10,7 @@ const inter = Noto_Sans({
 function Home() {
   return (
     <>
-      <main className={inter.className}></main>
+      <main className={inter.className}>Контент</main>
     </>
   );
 }

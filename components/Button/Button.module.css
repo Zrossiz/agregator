@@ -22,7 +22,7 @@
 .ghost {
   color: var(--black);
   background: none;
-  border: 2px solid var(--gray-light);
+  border: 2px solid var(--grey-light);
 }
 
 .ghost:hover {
