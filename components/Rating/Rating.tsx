@@ -1,10 +1,8 @@
-"use client";
-
 import { useState, useEffect, KeyboardEvent } from "react";
 import { RatingProps } from "./Rating.props";
 import styles from "./Rating.module.css";
 import cn from "classnames";
-import Star from "./Star.svg";
+import StarIcon from "./Star.svg";
 
 export const Rating = ({
   isEditable = false,
@@ -25,7 +23,7 @@ export const Rating = ({
     const updatedArray = ratingArray.map((r: JSX.Element, index: number) => {
       return (
         <span key={index}>
-          <Star
+          <StarIcon
             className={cn(styles.star, {
               [styles.filled]: index < currentRating,
               [styles.editable]: isEditable,
@@ -34,8 +32,8 @@ export const Rating = ({
             onMouseLeave={() => changeDisplay(rating)}
             onClick={() => onClick(index + 1)}
             tabIndex={isEditable ? 0 : -1}
-            onKeyDown={(e: KeyboardEvent<SVGElement>) =>
-              isEditable && handleSpace(index + 1, e)
+            onKeyDown={(event: KeyboardEvent<SVGElement>) =>
+              isEditable && handleSpace(index + 1, event)
             }
           />
         </span>
@@ -44,11 +42,11 @@ export const Rating = ({
     setRatingArray(updatedArray);
   };
 
-  const handleSpace = (i: number, e: KeyboardEvent<SVGElement>) => {
-    if (e.code != "Space" || !setRating) {
+  const handleSpace = (index: number, event: KeyboardEvent<SVGElement>) => {
+    if (event.code != "Space" || !setRating) {
       return;
     }
-    setRating(i);
+    setRating(index);
   };
 
   const onClick = (index: number) => {
