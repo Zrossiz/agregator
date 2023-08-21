@@ -13,9 +13,7 @@ function Home({ menu }: HomeProps) {
   return (
     <>
       <main className={inter.className}>
-        {menu.map((m) => (
-          <li key={m._id.secondCategory}>{m._id.secondCategory}</li>
-        ))}
+
       </main>
     </>
   );
