@@ -27,7 +27,7 @@
     text-transform: uppercase;
     color: var(--grey-dark);
     font-weight: 300;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
 }
 
@@ -38,7 +38,15 @@
     border-left: 1px solid #dfdfdf;
 }
 
-.secondBlockOpened:last-child {
+.secondlevelBlock {
+    display: none;
+}
+
+.secondlevelBlockOpened {
+    display: block;
+}
+
+.secondLevelBlockOpened:last-child {
     margin-bottom: 20px;
 }
 
