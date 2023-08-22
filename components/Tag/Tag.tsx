@@ -3,7 +3,7 @@ import { TagProps } from "./Tag.props";
 import styles from "./Tag.module.css";
 import cn from "classnames";
 
-const Tag = ({
+export const Tag = ({
   size = "s",
   children,
   href,
@@ -28,5 +28,3 @@ const Tag = ({
     </div>
   );
 };
-
-export default Tag;

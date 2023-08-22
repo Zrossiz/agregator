@@ -1,10 +1,11 @@
 import React from "react";
-import Htag from "@/components/Htag/Htag";
-import Tag from "@/components/Tag/Tag";
-import HhData from "@/components/HhData/HhData";
+import { Htag, Span } from "@/components";
+import { Tag } from "@/components";
+import { HhData } from "@/components";
 import styles from "./TopPageComponent.module.css";
 import { TopPageComponentProps } from "./TopPageComponent.props";
 import { TopLevelCategory } from "@/interfaces/page.interface";
+import { Advantage } from "@/components";
 
 const TopPageComponent = ({
   page,
@@ -12,7 +13,7 @@ const TopPageComponent = ({
   firstCategory,
 }: TopPageComponentProps) => {
   return (
-    <div className={styles.wrapper}>
+    <div>
       <div className={styles.title}>
         <Htag tag="h1">{page.title}</Htag>
         {products && (
@@ -31,7 +32,29 @@ const TopPageComponent = ({
           hh.ru
         </Tag>
       </div>
-      {firstCategory == TopLevelCategory.Courses && <HhData {...page.hh} />}
+      {firstCategory == TopLevelCategory.Courses && page.hh && (
+        <HhData {...page.hh} />
+      )}
+      {page.advantages && page.advantages.length > 0 ? (
+        <>
+          <Htag tag={"h2"}>Преимущества</Htag>
+          <Advantage advantages={page.advantages} />
+        </>
+      ) : (
+        <>
+          <Htag tag={"h2"}>Преимущества</Htag>
+          <Advantage />
+          <Advantage />
+          <Advantage />
+        </>
+      )}
+      {page.advantages ? <Span>{page.seoText}</Span> : <Span>SEO text</Span>}
+      <Htag tag={"h2"}>Получаемые навыки</Htag>
+      {page?.tags.map((t) => (
+        <Tag key={t} color="primary">
+          {t}
+        </Tag>
+      ))}
     </div>
   );
 };

@@ -1,11 +1,11 @@
 import React from "react";
 import { HhDataProps } from "./HhData.props";
-import Card from "../Card/Card";
+import { Card } from "@/components";
 import styles from "./HhData.module.css";
 import RateIcon from "./Rate.svg";
 import { priceRu } from "@/helpers/helpers";
 
-const HhData = ({
+export const HhData = ({
   count,
   juniorSalary,
   middleSalary,
@@ -49,5 +49,3 @@ const HhData = ({
     </div>
   );
 };
-
-export default HhData;

@@ -22,6 +22,7 @@ body {
   color: var(--black);
   background-color: #f5f6f8;
   max-width: 100vw;
+  font-family: sans-serif
 }
 
 body {

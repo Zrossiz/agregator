@@ -3,7 +3,12 @@ import { SpanProps } from "./Span.props";
 import styles from "./Span.module.css";
 import cn from "classnames";
 
-const Span = ({ size = "m", children, className, ...props }: SpanProps) => {
+export const Span = ({
+  size = "m",
+  children,
+  className,
+  ...props
+}: SpanProps) => {
   return (
     <span
       className={cn(className, {
@@ -17,5 +22,3 @@ const Span = ({ size = "m", children, className, ...props }: SpanProps) => {
     </span>
   );
 };
-
-export default Span;

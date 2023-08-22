@@ -4,7 +4,7 @@ import styles from "./Button.module.css";
 import cn from "classnames";
 import Arrow from "./Arrow.svg";
 
-const Button = ({
+export const Button = ({
   appearance,
   children,
   arrow = "none",
@@ -32,5 +32,3 @@ const Button = ({
     </button>
   );
 };
-
-export default Button;
