@@ -48,7 +48,14 @@ const TopPageComponent = ({
           <Advantage />
         </>
       )}
-      {page.advantages ? <Span>{page.seoText}</Span> : <Span>SEO text</Span>}
+      {page.seoText ? (
+        <div
+          className={styles.seo}
+          dangerouslySetInnerHTML={{ __html: page.seoText }}
+        />
+      ) : (
+        <Span>SEO text</Span>
+      )}
       <Htag tag={"h2"}>Получаемые навыки</Htag>
       {page?.tags.map((t) => (
         <Tag key={t} color="primary">
