@@ -38,6 +38,10 @@ a {
   color: inherit;
 }
 
+input {
+  font-family: 'Noto sans', sans-serif;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

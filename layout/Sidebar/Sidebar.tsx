@@ -3,12 +3,15 @@ import { SidebarProps } from "./Sidebar.props";
 import styles from "./Sidebar.module.css";
 import Menu from "@/layout/Menu/Menu";
 import Logo from "../Logo.svg";
+import Link from "next/link";
 import cn from "classnames";
 
 const Sidebar = ({ className, ...props }: SidebarProps) => {
   return (
     <div {...props} className={cn(className, styles.sidebar)}>
-      <Logo className={styles.logo} />
+      <Link href={"/"}>
+        <Logo className={styles.logo} />
+      </Link>
       <div>Поиск</div>
       <Menu />
     </div>

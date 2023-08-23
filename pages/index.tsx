@@ -3,6 +3,7 @@ import { withLayout } from "@/layout/Layout";
 import { GetStaticProps } from "next";
 import axios from "axios";
 import { MenuItem } from "@/interfaces/menu.interface";
+import { Input } from "@/components";
 
 const inter = Noto_Sans({
   subsets: ["latin"],
@@ -13,7 +14,7 @@ function Home({ menu }: HomeProps) {
   return (
     <>
       <main className={inter.className}>
-
+        <Input placeholder="Введите текст" />
       </main>
     </>
   );

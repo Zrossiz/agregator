@@ -1,4 +1,3 @@
-import { loadGetInitialProps } from "next/dist/shared/lib/utils";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
