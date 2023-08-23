@@ -1,11 +1,12 @@
 import React from "react";
-import { Htag, Span } from "@/components";
+import { Htag, Sort, Span } from "@/components";
 import { Tag } from "@/components";
 import { HhData } from "@/components";
 import styles from "./TopPageComponent.module.css";
 import { TopPageComponentProps } from "./TopPageComponent.props";
 import { TopLevelCategory } from "@/interfaces/page.interface";
 import { Advantage } from "@/components";
+import { SortEnum } from "@/components/Sort/Sort.props";
 
 const TopPageComponent = ({
   page,
@@ -21,7 +22,11 @@ const TopPageComponent = ({
             {products.length}
           </Tag>
         )}
-        <span>Сортировка</span>
+        <Sort
+          setSort={function (sort: SortEnum): void {
+            throw new Error("Function not implemented.");
+          }}
+        />
       </div>
       <div>
         {products && products.map((p) => <div key={p._id}>{p.title}</div>)}
