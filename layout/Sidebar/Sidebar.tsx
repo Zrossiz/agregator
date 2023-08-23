@@ -5,6 +5,7 @@ import Menu from "@/layout/Menu/Menu";
 import Logo from "../Logo.svg";
 import Link from "next/link";
 import cn from "classnames";
+import { Search } from "@/components";
 
 const Sidebar = ({ className, ...props }: SidebarProps) => {
   return (
@@ -12,7 +13,7 @@ const Sidebar = ({ className, ...props }: SidebarProps) => {
       <Link href={"/"}>
         <Logo className={styles.logo} />
       </Link>
-      <div>Поиск</div>
+      <Search />
       <Menu />
     </div>
   );
