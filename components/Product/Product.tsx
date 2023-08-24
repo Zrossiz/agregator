@@ -2,7 +2,7 @@ import styles from "./Product.module.css";
 import { ProductProps } from "./Product.props";
 import cn from "classnames";
 import { Button, Card, Rating, Divider, Tag } from "..";
-import { priceRu } from "@/helpers/helpers";
+import { declOfNum, priceRu } from "@/helpers/helpers";
 
 export const Product = ({
   product,
@@ -43,7 +43,10 @@ export const Product = ({
       </div>
       <div className={styles.priceTitle}>цена</div>
       <div className={styles.creditTitle}>в кредит</div>
-      <div className={styles.rateTitle}>{product.reviewCount} отзывов</div>
+      <div className={styles.rateTitle}>
+        {product.reviewCount}{" "}
+        {declOfNum(product.reviewCount, ["отзыв", "отзыва", "отзывов"])}
+      </div>
       <Divider className={styles.hr} />
       <div className={styles.description}>{product.description}</div>
       <div className={styles.feature}>фичи</div>
