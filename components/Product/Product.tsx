@@ -1,7 +1,7 @@
 import styles from "./Product.module.css";
 import { ProductProps } from "./Product.props";
 import Image from "next/image";
-import { Button, Card, Rating, Divider, Tag, Review } from "..";
+import { Button, Card, Rating, Divider, Tag, Review, ReviewForm } from "..";
 import { declOfNum, priceRu } from "@/helpers/helpers";
 import cn from "classnames";
 import { useState } from "react";
@@ -99,8 +99,12 @@ export const Product = ({
         })}
       >
         {product.reviews.map((r) => (
-          <Review review={r} key={r._id} />
+          <div key={r._id}>
+            <Review review={r} />
+            <Divider />
+          </div>
         ))}
+        <ReviewForm productId={product._id} />
       </Card>
     </>
   );
