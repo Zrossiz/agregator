@@ -39,6 +39,7 @@ export const ReviewForm = ({
                 isEditable
                 rating={field.value}
                 setRating={field.onChange}
+                ref={field.ref}
               />
             )}
           />
