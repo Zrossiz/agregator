@@ -8,6 +8,7 @@ import { Rating } from "../Rating/Rating";
 import { Textarea } from "../Textarea/Textarea";
 import { Button } from "../Button/Button";
 import { IReviewForm } from "./ReviewForm.interface";
+import { error } from "console";
 
 export const ReviewForm = ({
   productId,
@@ -50,10 +51,15 @@ export const ReviewForm = ({
             name="rating"
             render={({ field }) => (
               <Rating
+                {...(register("rating"),
+                {
+                  required: { value: true, message: "Введите оценку" },
+                })}
                 isEditable
                 rating={field.value}
                 setRating={field.onChange}
                 ref={field.ref}
+                error={errors.rating}
               />
             )}
           />
