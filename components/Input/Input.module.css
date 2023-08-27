@@ -14,5 +14,20 @@
 }
 
 .input ::placeholder {
-    color: var(--light-grey)
+    color: var(--light-grey);
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.error {
+    border: 1px solid var(--red);
+}
+
+.errorMessage {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    color: var(--red);
 }

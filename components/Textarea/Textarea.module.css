@@ -7,6 +7,7 @@
     border-radius: 5px;
     font-size: 16px;
     line-height: 22px;
+    width: 100%;
 }
 
 .textarea:focus {
@@ -15,4 +16,19 @@
 
 .textarea ::placeholder {
     color: var(--light-grey)
+}
+
+.textareaWrapper {
+    position: relative;
+}
+
+.error {
+    border: 1px solid var(--red);
+}
+
+.errorMessage {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    color: var(--red);
 }
