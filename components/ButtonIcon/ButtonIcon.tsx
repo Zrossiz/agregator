@@ -7,6 +7,7 @@ export const ButtonIcon = ({
   appearance,
   icon,
   className,
+  ...props
 }: ButtonIconProps) => {
   const IconComp = icons[icon];
 
@@ -16,6 +17,7 @@ export const ButtonIcon = ({
         [styles.primary]: appearance == "primary",
         [styles.white]: appearance == "white",
       })}
+      {...props}
     >
       <IconComp />
     </button>

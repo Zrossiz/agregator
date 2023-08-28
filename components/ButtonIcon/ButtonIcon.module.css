@@ -35,8 +35,10 @@
   fill: var(--primary);
 }
 
-.white:hover svg * {
+.white:hover,
+.white:hover svg rect {
   fill: var(--white);
+  background-color: var(--primary);
 }
 
 .arrow {
@@ -53,3 +55,9 @@
 .ghost:hover svg {
   fill: var(--white);
 }
+
+/* @media (max-width: 765px) {
+  .button {
+    display: inline-block;
+  }
+} */

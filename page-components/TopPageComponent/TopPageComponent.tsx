@@ -25,8 +25,6 @@ const TopPageComponent = ({
     { products, sort: SortEnum.Rating }
   );
 
-  const y = useScrollY();
-
   const setSort = (sort: SortEnum) => {
     dispathSort({ type: sort });
   };
@@ -37,7 +35,6 @@ const TopPageComponent = ({
 
   return (
     <div className={styles.wrapper}>
-      {y}
       <div className={styles.title}>
         <Htag tag="h1">{page.title}</Htag>
         {products && (
