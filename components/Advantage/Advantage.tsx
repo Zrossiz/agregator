@@ -1,7 +1,5 @@
 import React from "react";
-import { Htag } from "@/components";
 import { AdvantageProps } from "./Advatage.props";
-import { Span } from "@/components";
 import CheckIcon from "./Check.svg";
 import styles from "./Advantage.module.css";
 

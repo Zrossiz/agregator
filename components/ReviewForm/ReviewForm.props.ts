@@ -4,3 +4,7 @@ export interface ReviewFormProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   productId: string;
 }
+
+export interface IReviewSendResponse {
+  message: string;
+}
