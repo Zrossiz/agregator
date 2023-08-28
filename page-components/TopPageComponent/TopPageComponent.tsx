@@ -13,6 +13,7 @@ import { TopPageComponentProps } from "./TopPageComponent.props";
 import { SortEnum } from "@/components/Sort/Sort.props";
 import { TopLevelCategory } from "@/interfaces/page.interface";
 import { sortReducer } from "../sort.reducer";
+import { useScrollY } from "@/hooks/useScrollY";
 
 const TopPageComponent = ({
   page,
@@ -24,6 +25,8 @@ const TopPageComponent = ({
     { products, sort: SortEnum.Rating }
   );
 
+  const y = useScrollY();
+
   const setSort = (sort: SortEnum) => {
     dispathSort({ type: sort });
   };
@@ -33,7 +36,8 @@ const TopPageComponent = ({
   }, [products]);
 
   return (
-    <div>
+    <div className={styles.wrapper}>
+      {y}
       <div className={styles.title}>
         <Htag tag="h1">{page.title}</Htag>
         {products && (
