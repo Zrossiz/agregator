@@ -17,10 +17,10 @@ const Menu = () => {
 
   const variants = {
     visible: {
-      marginBottom: 20,
+      marginBottom: 15,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.1,
+        staggerChildren: 0.2,
       },
     },
     hidden: { marginBottom: 0 },
@@ -71,7 +71,7 @@ const Menu = () => {
     );
   };
 
-  const buildSecondLevel = (menuItem: FirstLevelMenuItem) => {
+  const buildSecondLevel = (menuItem: firstLevelMenuItem) => {
     return (
       <div className={styles.secondBlock}>
         {menu.map((m) => {
