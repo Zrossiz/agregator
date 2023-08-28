@@ -12,53 +12,50 @@
 .firstLevelActive,
 .firstLevel:hover {
     color: var(--primary);
-    transition: 0.6s;
 }
 
 .firstLevelActive svg,
 .firstLevel:hover svg {
     fill: var(--primary);
-    transition: 0.6s;
 }
 
 .secondLevel {
     margin-bottom: 10px;
+
     cursor: pointer;
     text-transform: uppercase;
-    color: var(--grey-dark);
+
+    color: var(--gray-dark);
+
     font-weight: 300;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 16px;
 }
 
 .secondBlock {
     margin-top: 15px;
-    margin-right: 12px;
+    margin-left: 12px;
     padding-left: 32px;
-    border-left: 1px solid #dfdfdf;
+
+    border-left: 1px solid #DFDFDF;
 }
 
-.secondlevelBlock {
-    display: none;
-}
-
-.secondlevelBlockOpened {
-    display: block;
-}
-
-.secondLevelBlockOpened:last-child {
-    margin-bottom: 20px;
+.secondLevelBlock {
+    overflow: hidden;
 }
 
 .thirdLevel {
-    display: block;
     margin-bottom: 10px;
+    display: block;
+
     cursor: pointer;
-    color: var(--grey-dark);
+
+    color: var(--gray-dark);
     font-weight: 500;
     font-size: 14px;
     line-height: 19px;
 }
+
 
 .thirdLevelActive,
 .thirdLevel:hover {
