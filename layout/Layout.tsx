@@ -1,12 +1,16 @@
 import React, { FunctionComponent } from "react";
+import { Noto_Sans } from "next/font/google";
+import cn from "classnames";
+
 import { LayoutProps } from "./Layout.props";
 import Header from "./Header/Header";
 import Sidebar from "./Sidebar/Sidebar";
 import Footer from "./Footer/Footer";
 import styles from "./Layout.module.css";
+
+import { Up } from "@/components";
+
 import { AppContextProvider, IAppContext } from "@/context/app.context";
-import cn from "classnames";
-import { Noto_Sans } from "next/font/google";
 
 const inter = Noto_Sans({
   subsets: ["latin"],
@@ -20,6 +24,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Sidebar className={styles.sidebar} />
       <div className={styles.body}>{children}</div>
       <Footer className={styles.footer} />
+      <Up />
     </div>
   );
 };
