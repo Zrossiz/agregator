@@ -7,9 +7,14 @@ import { firstLevelMenu } from "@/helpers/helpers";
 import { MenuItem } from "@/interfaces/menu.interface";
 import { withLayout } from "@/layout/Layout";
 import { API } from "@/helpers/api";
+import Head from "next/head";
 
 const Type = ({ firstCategory }: TypeProps) => {
-  return <div>Type: {firstCategory}</div>;
+  return (
+    <div>
+      <Head></Head> Type: {firstCategory}
+    </div>
+  );
 };
 
 export default withLayout(Type);

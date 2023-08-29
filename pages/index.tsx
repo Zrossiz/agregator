@@ -6,6 +6,7 @@ import { withLayout } from "@/layout/Layout";
 import { MenuItem } from "@/interfaces/menu.interface";
 import { Input, Textarea } from "@/components";
 import { API } from "@/helpers/api";
+import Head from "next/head";
 
 const inter = Noto_Sans({
   subsets: ["latin"],
