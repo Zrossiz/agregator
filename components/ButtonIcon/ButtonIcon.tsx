@@ -1,7 +1,8 @@
 import React from "react";
+import cn from "classnames";
+import { motion } from "framer-motion";
 import { ButtonIconProps, icons } from "./ButtonIcon.props";
 import styles from "./ButtonIcon.module.css";
-import cn from "classnames";
 
 export const ButtonIcon = ({
   appearance,
@@ -12,7 +13,9 @@ export const ButtonIcon = ({
   const IconComp = icons[icon];
 
   return (
-    <button
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.8 }}
       className={cn(styles.button, className, {
         [styles.primary]: appearance == "primary",
         [styles.white]: appearance == "white",
@@ -20,6 +23,6 @@ export const ButtonIcon = ({
       {...props}
     >
       <IconComp />
-    </button>
+    </motion.button>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { ButtonProps } from "./Button.props";
 import styles from "./Button.module.css";
 import cn from "classnames";
@@ -12,7 +13,9 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   return (
-    <button
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.8 }}
       className={cn(styles.button, className, {
         [styles.primary]: appearance == "primary",
         [styles.ghost]: appearance == "ghost",
@@ -29,6 +32,6 @@ export const Button = ({
           <Arrow />
         </span>
       )}
-    </button>
+    </motion.button>
   );
 };
