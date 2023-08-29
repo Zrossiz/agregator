@@ -7,14 +7,9 @@ import { firstLevelMenu } from "@/helpers/helpers";
 import { MenuItem } from "@/interfaces/menu.interface";
 import { withLayout } from "@/layout/Layout";
 import { API } from "@/helpers/api";
-import Head from "next/head";
 
 const Type = ({ firstCategory }: TypeProps) => {
-  return (
-    <div>
-      <Head></Head> Type: {firstCategory}
-    </div>
-  );
+  return <div>Type: {firstCategory}</div>;
 };
 
 export default withLayout(Type);
@@ -48,7 +43,7 @@ export const getStaticProps: GetStaticProps<TypeProps> = async ({
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: firstLevelMenu.map((m) => "/" + m.route),
-    fallback: true,
+    fallback: false,
   };
 };
 
