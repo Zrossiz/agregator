@@ -16,9 +16,9 @@ import TopPageComponent from "@/page-components/TopPageComponent/TopPageComponen
 import { Error404 } from "../404";
 
 function TopPage({ firstCategory, page, products }: TopPageProps) {
-  if (!page || products) {
+  /*   if (!page || products) {
     return <Error404 />;
-  }
+  } */
   return (
     <>
       <Head>
